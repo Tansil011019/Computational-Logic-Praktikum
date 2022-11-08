@@ -1,0 +1,372 @@
+Bagian 1
+
+3a.
+| ?- suami(vito, Y).
+
+Y = power
+
+yes
+
+Kesimpulan: Power adalah istri dari Vito.
+
+3b.
+| ?- kakak(elonmusk, Y).
+
+Y = patrick
+
+yes
+
+Kesimpulan: Patrick adalah adik dari Elon Musk.
+
+3c. 
+| ?- anak(_X, gojo), cucu(Y, _X).
+
+Y = anya ? 
+
+yes
+
+Kesimpulan: cicit dari Jojo adalah Gojo.
+
+3d.
+| ?- keponakan(wesly, X), usia(X, _A), \+ (keponakan(wesly, _Y), usia(_Y, _B), _B>_A).
+
+X = vanrossum ? 
+
+yes
+
+Kesimpulan: Paman atau bibi tertua Wesly adalah Van Rossum.
+
+3e.
+| ?- menikah(_X, aqua), menikah(aqua, _X), saudara(_X, _Y), saudara(_Y, _X), menikah(_Y, Z), menikah(Z, _Y).
+
+Z = vito ? 
+
+yes
+
+Kesimpulan: Pasangan dari ipar Aqua adalah Vito.
+
+3f.
+| ?- cucu(X, khelli), anakbungsu(X).
+
+X = patrick ? 
+
+yes
+
+Kesimpulan: cucu termuda dari Khelli adalah Patrick.
+
+3g.
+| ?- anak(X, _Y), pria(_Y), \+anaksulung(X), \+ (kakak(Y, X), \+anaksulung(Y)).
+
+X = bambang ? ;
+
+X = power ? ;
+
+X = patrick ? 
+
+yes
+
+Kesimpulan: orang yang menjadi anak kedua dari keluarganya adalah Bambang, Power, dan Patrick.
+
+3h.
+| ?- anak(_X, Y), \+ (kakak(_Z, _X), \+anaksulung(_Z)), anakbungsu(_X), \+anaksulung(_X).
+
+Y = gojo ? ;
+
+Y = gojo ? ;
+
+Y = lovelace ? ;
+
+Y = lovelace ? ;
+
+Y = ave ? ;
+
+Y = ave ? ;
+
+Y = aqua ? ;
+
+Y = aqua ? ;
+
+no
+
+Kesimpulan: Orang tua yang memiliki tepat dua anak adalah Gojo, Lovelace, Ave, dan Aqua.
+
+3i.
+| ?- menantu(X, _).
+
+X = power ? ;
+
+X = power ? ;
+
+X = vito ? ;
+
+X = vito ? ;
+
+X = aqua ? ;
+
+X = aqua ? ;
+
+X = ave ? ;
+
+X = ave ? ;
+
+X = wulandari ? ;
+
+X = wulandari ? ;
+
+no
+
+Kesimpulan: Orang yang punya mertua adalah Power, Vito, Aqua, Ave, dan Wulandari.
+
+3j.
+| ?- wanita(Y), anak(_X, Y), (kakak(_X, _Z); kakak(_Z, _X)).
+
+Y = indah ? ;
+
+Y = indah ? ;
+
+Y = indah ? ;
+
+Y = indah ? ;
+
+Y = indah ? ;
+
+Y = indah ? ;
+
+Y = lovelace ? ;
+
+Y = aqua ? ;
+
+Y = aqua ? ;
+
+no
+
+Kesimpulan: Wanita yang punya lebih dari 1 anak adalah Indah, Lovelace, dan Aqua.
+
+3k.
+| ?- (anak(_X, Y), wanita(Y), anaksulung(_X), usia(_X, _A), usia(Y, _B), (_B-_A)>20); (wanita(Y), usia(Y, _A), _A>20, \+anak(_,Y)).
+
+Y = indah ? ;
+
+Y = indah ? ;
+
+Y = khelli ? ;
+
+Y = khelli ? ;
+
+Y = power ? ;
+
+Y = power ? ;
+
+Y = aqua ? ;
+
+Y = aqua ? ;
+
+no
+
+Kesimpulan: Orang yang belum pernah melahirkan ketika berusia di atas 20 tahun adalah Indah, Khelli, Power, dan Aqua.
+
+3l.
+| ?- keturunan(X, gede), usia(X, _A), _A>=25.
+
+X = vanrossum ? ;
+
+X = bambang ? ;
+
+X = vito ? ;
+
+X = wesly ? ;
+
+no
+
+Kesimpulan: Keturunan dari Gede yang umurnya tidak lebih kecil dari 25 tahun adalah Van Rossum, Bambang, Vito, dan Wesly.
+
+Bagian 2
+1.
+| ?- combination(5, 2, X).
+
+X = 10.0 ? 
+
+yes
+
+Kesimpulan: Kombinasi 5 dari 2 adalah 10.
+
+2.
+| ?- change(X, 14).
+
+X = 4
+
+yes
+
+Kesimpulan: 14 dapat ditukar dengan 4 pecahan 1, 2, dan 5.
+
+3.
+| ?- fpb(14, 18, X).
+
+X = 2 ? 
+
+yes
+
+Kesimpulan: faktor persekutuan terbesar dari 14 dan 18 adalah 2.
+
+4.
+| ?- mod(5, 2, X).
+
+X = 1 ? 
+
+yes
+
+Kesimpulan: 5 mod 2 = 1.
+
+5.
+| ?- deret(5, Y).
+
+Y = 10 ? 
+
+yes
+
+Kesimpulan: nilai suku ke 5 dari deret adalah 10.
+
+Bagian 3a
+1.
+| ?- min([9, -8, -7, 11, -10], Min).
+
+Min = -10 ? 
+
+yes
+
+Kesimpulan: elemen minimum dari list adalah -10.
+
+2.
+| ?- max([9, -8, -7, 11, -10], Max).
+
+Max = 11
+
+yes
+
+Kesimpulan: elemen maksimum dari list adalah 11.
+
+3.
+| ?- range([9, -8, -7, 11, -10], Range).
+
+Range = 21 ? 
+
+yes
+
+Kesimpulan: Selisih antara elemen maksimum dan minimum adalah 21.
+
+4.
+| ?- count([9, -8, -7, 11, -10], Count).
+
+Count = 5 ? 
+
+yes
+
+Kesimpulan: Jumlah elemen pada list adalah 5.
+
+5.
+| ?- sum([9, -8, -7, 11, -10], Sum).
+
+Sum = -5 ? 
+
+yes
+
+Kesimpulan: Jumlah total elemen pada list adalah -5.
+
+Bagian B
+1.
+| ?- getIndex([1,2,5,-2,1,-2,-7], -2, Index).
+
+Index = 4
+
+yes
+
+Kesimpulan: Index dari -2 pada list adalah 4.
+
+| ?- getIndex([1,2,5,-2,1,-2,-7], -11, Index).
+
+no
+
+Kesimpulan: Tidak terdapat elemen -11 pada list.
+
+2.
+| ?- swap([5,6,7,8], 1, 1, Result).
+
+Result = [5,6,7,8]
+
+yes
+
+Kesimpulan: Hasil dari swapping adalah [5,6,7,8].
+
+| ?- swap([5,6,7,8], 4, 2, Result).
+
+Result = [5,8,7,6]
+
+yes
+
+Kesimpulan: Hasil dari swapping adalah [5,8,7,6].
+
+| ?- swap([5,6,7,8], 4, 6, Result).
+
+no
+
+Kesimpulan: Index overflow.
+
+3.
+| ?- splitList([1,2,3,4,5,6], Ganjil, Genap).
+
+Ganjil = [1,3,5]
+Genap = [2,4,6] ? 
+
+yes
+
+Kesimpulan: [1,3,5] list ganjil dan [2,4,6] list genap.
+
+| ?- splitList([1,2,3,4,5,6,7], Ganjil, Genap).
+
+Ganjil = [1,3,5,7]
+Genap = [2,4,6] ? 
+
+yes
+
+Kesimpulan: [1,3,5,7] list ganjil dan [2,4,6] list genap.
+
+Bonus
+| ?- startCalculator.
+Selamat Datang di Kalkulator Prolog
+Currently Saved Value is 0
+
+yes
+| ?- add(5).
+Old Saved Value is 0
+New Saved Value is 5
+
+yes
+| ?- substract(7).
+Old Saved Value is 5
+New Saved Value is -2
+
+yes
+| ?- divide(-2).
+Old Saved Value is -2
+New Saved Value is 1.0
+
+yes
+| ?- multiply(0.5).
+Old Saved Value is 1.0
+New Saved Value is 0.5
+
+yes
+| ?- getValue.
+Currently Saved Value is 0.5
+
+yes
+| ?- exitCalculator.
+Terima Kasih telah Menggunakan Kalkulator Prolog
+
+yes
+| ?- add(6).
+
+no
+| ?- substract(8).
+
+no
